@@ -4,9 +4,8 @@ class Application
     req = Rack::Request.new(env)
     resp = Rack::Response.new
     
-    if req.path.match(/items/)
+    if req.path == "/items/"
       item = req.path.split("/items/").last 
-      binding.pry
       if Item.all.include?(item)
         resp.write item.price
       else
