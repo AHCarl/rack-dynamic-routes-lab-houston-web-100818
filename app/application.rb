@@ -6,6 +6,7 @@ class Application
     
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last 
+      item = Item.find
       if Item.all.include?(item)
         resp.write item.price
       else
