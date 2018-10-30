@@ -4,6 +4,6 @@ class Application
     req = Rack::Request.new(env)
     resp = Rack::Response.new
     
-    if path
+    if req.path == ''
   end
 end
