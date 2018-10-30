@@ -5,7 +5,7 @@ class Application
     resp = Rack::Response.new
     
     if req.path.match(/items/)
-      item = req.path.split("/items/").last
+      resp.write req.path.split("/items/").last
     
   end
   
