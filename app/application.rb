@@ -4,6 +4,7 @@ class Application
     req = Rack::Request.new(env)
     resp = Rack::Response.new
     
-    if req.path == ''
+    if req.path == "/items"
+      item = req.
   end
 end
