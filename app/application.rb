@@ -5,6 +5,7 @@ class Application
     resp = Rack::Response.new
     
     if req.path.match(/items/)
+      resp.write ""
     
   end
   
