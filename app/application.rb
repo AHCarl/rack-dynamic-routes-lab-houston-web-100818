@@ -5,6 +5,14 @@ class Application
     resp = Rack::Response.new
     
     if req.path == "/items"
-      item = req.path.
+      item = req.path.split("/items").last 
+      if Item.all.include?(item)
+        resp.write item.price
+      else
+        resp.write "Item not found"
+        resp.code 
+      end 
+    else 
+      
   end
 end
